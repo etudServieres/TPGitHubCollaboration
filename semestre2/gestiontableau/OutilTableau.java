@@ -52,7 +52,16 @@ public class OutilTableau {
      * @param table   tableau à décaler
      */
     public static void decalerDroite(int [] table) {
-         // TODO
+         // on sauvegarde le dernier élément du tableau
+        int dernier = table[table.length - 1];                                          
+
+        // les valeurs du tableau sont déplacées d'une case vers la droite
+        for (int i = table.length-1; i > 0; i--) {
+            table[i] = table[i-1];
+        }
+
+        // le dernier élément devient le premier
+        table[0] = dernier ;
     }
 
 

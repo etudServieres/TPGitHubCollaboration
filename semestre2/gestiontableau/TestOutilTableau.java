@@ -67,7 +67,25 @@ public class TestOutilTableau {
         System.out.println("TEST de la méthode decalageDroite\n"
                 + "----------------------------------\n");
         int[] table1 = { 12, 34, 5, -8, 4, 6, 9, 12, 5, 11};
-        // TODO   
+
+        System.out.print("Test 1 : tableau à décaler : ");
+        OutilTableau.afficher(table1);
+        System.out.print("\n  => ");
+        OutilTableau.afficher(DECAL_TABLE1);
+        OutilTableau.decalerDroite(table1);
+        System.out.print("      (résultat correct)\n  => ");
+        OutilTableau.afficher(table1);
+        System.out.println("      (à vérifier)\n");
+                
+        int[] table2 = { 5, 10, 15, 20, 25, 30, 35, 40, 45, 50};;
+        System.out.print("Test 2 : tableau à décaler : ");
+        OutilTableau.afficher(table2);
+        OutilTableau.decalerDroite(table2);
+        System.out.print("\n  => ");
+        OutilTableau.afficher(DECAL_TABLE2);
+        System.out.print("      (résultat correct)\n  => ");
+        OutilTableau.afficher(table2);
+        System.out.println("      (à vérifier)\n");     
     }
     
     
@@ -133,8 +151,11 @@ public class TestOutilTableau {
       */
      public static void main(String[] args) {
          // testAfficher();
+
          testMiniMaxi();
-         // testDecalerDroite();
+
+         testDecalerDroite();
+
          // testcompterOccurrence();
          // testDecalerDroiteIntervalle();
          // testExtraire();
